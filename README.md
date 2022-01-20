@@ -1,6 +1,6 @@
-# EvmosJS
+# EvmosProtoJs
 
-A javascript library to interact with the evmos blockchain.
+A javascript library to interact with the evmos blockchain using http2/protobuf.
 
 ## Requirements
 
@@ -8,8 +8,9 @@ A javascript library to interact with the evmos blockchain.
 
 ## Installation
 
+*TODO: publish the pkg*
 ```sh
-yarn add @hanchon/evmosjs
+yarn add @hanchon/evmosprotojs
 ```
 
 ## Usage
@@ -17,7 +18,7 @@ yarn add @hanchon/evmosjs
 ### Account
 
 ```ts
-import { EvmosJS } from "@hanchon/evmosjs";
+import { EvmosJS } from "@hanchon/evmosprotojs";
 let lib = new EvmosJS('localhost:9090')
 let accountResponse = await lib.getAccount(req.body.wallet.address)
 
@@ -36,7 +37,7 @@ let accountResponse = await lib.getAccount(req.body.wallet.address)
 ### Message Send
 
 ```ts
-import { EvmosJS } from "@hanchon/evmosjs";
+import { EvmosJS } from "@hanchon/evmosprotojs";
 
 let lib = new EvmosJS('localhost:9090')
 let accountResponse = await lib.getAccount(req.body.wallet.address)
@@ -63,7 +64,7 @@ let transaction = lib.messages.CreateTransaction(
 ### Claiming module
 
 ```ts
-import { EvmosJS } from "@hanchon/evmosjs";
+import { EvmosJS } from "@hanchon/evmosprotojs";
 let lib = new EvmosJS('localhost:9090')
 let claims = await lib.getClaimRecords('evmos18453r3pzazr0da0nz6hxnp5qyh9a689lwm7z7e')
 /*
@@ -100,4 +101,5 @@ npm install -g grpc-tools
 
 ## TODOs
 
+- Publish the npm pkg
 - Add more protobuf messages
